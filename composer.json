@@ -1,0 +1,21 @@
+{
+    "name": "tuscanicz/writing-readable-code-1",
+    "type": "project",
+    "require": {
+        "symfony/console": "^4.0",
+        "symfony/yaml": "^4.0",
+        "symfony/dependency-injection": "^4.0",
+        "symfony/config": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wrc\\": "src/Wrc"
+        }
+    },
+    "authors": [
+        {
+            "name": "Petr Bechyně",
+            "email": "mail@petrbechyne.com"
+        }
+    ]
+}

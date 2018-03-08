@@ -1,0 +1,24 @@
+services:
+
+    Wrc\TestService:
+        class: 'Wrc\TestService'
+        arguments:
+            - '@Wrc\Api\ForeignApiHandler'
+
+    Wrc\TestMessyService:
+        class: 'Wrc\TestMessyService'
+        arguments:
+            - '@Wrc\Api\ForeignApiHandler'
+
+    Wrc\Api\ForeignApiHandler:
+        class: 'Wrc\Api\ForeignApiHandler'
+
+    Wrc\Command\RunCommand:
+        class: 'Wrc\Command\RunCommand'
+        arguments:
+            - '%tmp.dir%'
+            - '@Wrc\TestService'
+            - '@Wrc\File\FileWriter'
+
+    Wrc\File\FileWriter:
+        class: 'Wrc\File\FileWriter'
